@@ -44,7 +44,7 @@ extensions = [
 ]
 
 # avoid automatic execution for notebooks
-nbsphinx_execute = 'never'
+# nbsphinx_execute = 'never'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
