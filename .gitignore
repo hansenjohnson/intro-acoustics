@@ -1,0 +1,5 @@
+# directories
+.pynb_checkpoints/
+
+# files
+.DS_Store
