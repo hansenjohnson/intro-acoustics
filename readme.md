@@ -1,4 +1,4 @@
-# README
+# intro_acoustics
 Overview of essential tools and concepts for bioacoustics research
 
 ## Start a notebook
