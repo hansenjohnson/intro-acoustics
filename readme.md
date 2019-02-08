@@ -16,35 +16,37 @@ jupyter notebook
 ```
 
 ## Setting Jupyter Notebook for MATLAB
+
 Follow the tutorial here: https://am111.readthedocs.io/en/latest/jmatlab_install.html
 
 ### Python
 
-MATLAB_R2015a only runs up to Python 3.4, so we create a new virtual environment called `jmatlab`
+1. Create a virtual environment (called `jmatlab`) to run a version of Python compatible with matlab. I'm using MATLAB_R2015a, which only runs up to Python 3.4.
 ```
 conda create -vv -n jmatlab python=3.4 jupyter
 ```
 If you screw up and create something that doesn't work, follow the steps here to delete: https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#removing-an-environment
 
-Activate the environment
+2. Activate the environment
 ```
 source activate jmatlab
 ```
 
-Install the required packages
+3. Install the required packages
 ```
 pip install matlab_kernel
 
 python -m matlab_kernel install
 ```
 
-Verify kernel installation
+4. Verify kernel installation
 ```
 jupyter kernelspec list
 ```
 
 ### MATLAB
 
+1. Set up external Python engine
 ```
 cd /Applications/MATLAB_R2015a.app/extern/engines/python
 
@@ -57,17 +59,22 @@ python setup.py install
 
 Following along here: https://docs.readthedocs.io/en/latest/intro/getting-started-with-sphinx.html
 
-Install sphinx
+1. Install sphinx
 ```
 pip install sphinx
 ```
 
-Start sphinx in repo
+2. Start sphinx in repo
 ```
 cd ~/Projects/intro_acoustics/docs
 sphinx-quickstart
 ```
-Advance through prompts, selecting [almost] all defaults.
+3. Advance through prompts, selecting [almost] all defaults.
+
+4. Install pretty theme
+```
+pip install sphinx_rtd_theme
+```
 
 ### Set up nbsphinx to parse `.ipynb` files
 
