@@ -3,14 +3,16 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to intro-acoustics's documentation!
+Introduction to Acoustics
 ===========================================
+Overview of essential tools and concepts for bioacoustics research
+
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
-   generate_sine_wave.ipynb
+   sine_wave.ipynb
 
 
 
@@ -18,5 +20,4 @@ Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
