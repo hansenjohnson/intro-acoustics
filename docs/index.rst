@@ -10,6 +10,8 @@ Welcome to intro-acoustics's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   generate_sine_wave.ipynb
+
 
 
 Indices and tables

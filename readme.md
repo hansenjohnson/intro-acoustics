@@ -52,6 +52,9 @@ python setup.py install
 ```
 
 ## Set up `readthedocs`
+
+### Set up sphinx
+
 Following along here: https://docs.readthedocs.io/en/latest/intro/getting-started-with-sphinx.html
 
 Install sphinx
@@ -64,3 +67,15 @@ Start sphinx in repo
 cd ~/Projects/intro_acoustics/docs
 sphinx-quickstart
 ```
+Advance through prompts, selecting [almost] all defaults.
+
+### Set up nbsphinx to parse `.ipynb` files
+
+Following along here: https://nbsphinx.readthedocs.io/en/0.4.2/
+
+1. Install nbsphinx
+```
+pip install nbsphinx
+```
+2. Open `docs/conf.py` and add `'nbsphinx'` to `extensions`
+3. Add `*.ipynb` files to `toctree` in `index.rst`
