@@ -1,5 +1,6 @@
 # directories
-.pynb_checkpoints/
+.ipynb_checkpoints
+_build
 
 # files
 .DS_Store
