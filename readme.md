@@ -1,4 +1,4 @@
-# intro_acoustics
+# Introduction to Acoustics
 Overview of essential tools and concepts for bioacoustics research
 
 ## Start a notebook
