@@ -21,7 +21,7 @@
 
 project = 'Introduction to Acoustics'
 copyright = '2019, the authors'
-author = 'Youenn Jezequel, \\ Dr. Gaëtan Richard, \\ Hansen Johnson, \\ Dr. Julien Bonnel'
+author = 'Youenn Jezequel \\and Dr. Gaëtan Richard \\and Hansen Johnson \\and Dr. Julien Bonnel'
 
 # The short X.Y version
 version = ''
@@ -134,7 +134,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'intro-acoustics.tex', 'Introduction to Acoustics',
-     'Youenn Jezequel, \\ Dr. Gaëtan Richard, \\ Hansen Johnson, \\ Dr. Julien Bonnel', 'manual'),
+     'Youenn Jezequel \\and Dr. Gaëtan Richard \\and Hansen Johnson \\and Dr. Julien Bonnel', 'manual'),
 ]
 
 
