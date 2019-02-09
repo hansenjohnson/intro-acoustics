@@ -13,11 +13,3 @@ Overview of essential tools and concepts for bioacoustics research
    :caption: Contents:
 
    sine_wave.ipynb
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
