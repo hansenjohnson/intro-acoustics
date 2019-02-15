@@ -12,4 +12,5 @@ Overview of essential tools and concepts for bioacoustics research
    :maxdepth: 1
    :caption: Contents:
 
-   sine_wave.ipynb
+   signals.ipynb
+   time_domain_metrics.ipynb
