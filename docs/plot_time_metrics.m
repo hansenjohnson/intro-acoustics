@@ -29,6 +29,7 @@ for(ii = 1:length(a))
             switch lower(signal_type)                
                 case 'noise'
                     y = a_i/2*randn(1,n);
+                    f_i = NaN; % frequency doesn't apply here
                 case 'sine'
                     y = a_i*sin(2*pi*f_i*t);
                 case 'pulse'
