@@ -1,6 +1,7 @@
 # directories
 .ipynb_checkpoints
 _build
+wrk
 
 # files
 .DS_Store
