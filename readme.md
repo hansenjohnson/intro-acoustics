@@ -21,25 +21,27 @@ I followed along with the tutorial [here](https://am111.readthedocs.io/en/latest
 
 ### Python
 
-1. Create a virtual environment (called `jmatlab`) to run a version of Python compatible with matlab. I'm using MATLAB_R2015a, which only runs up to Python 3.4.
+1. Install python. I highly recommend installing using [conda](https://conda.io/en/latest/), which greatly simplifies managing Python environments and packages.
+
+2. Create a virtual environment (called `jmatlab`) to run a version of Python compatible with matlab. I'm using MATLAB_R2015a, which only runs up to Python 3.4.
 ```
 conda create -vv -n jmatlab python=3.4 jupyter
 ```
 If you screw up and create something that doesn't work, follow the steps [here to delete an environment](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#removing-an-environment)
 
-2. Activate the environment
+3. Activate the environment
 ```
 source activate jmatlab
 ```
 
-3. Install the required packages
+4. Install the required packages
 ```
 pip install matlab_kernel
 
 python -m matlab_kernel install
 ```
 
-4. Verify kernel installation
+5. Verify kernel installation
 ```
 jupyter kernelspec list
 ```
