@@ -12,6 +12,5 @@ Overview of essential tools and concepts for bioacoustics research
    :maxdepth: 1
    :caption: Contents:
 
-   signals.ipynb
    time_domain_metrics.ipynb
    freq_domain_metrics.ipynb
