@@ -64,11 +64,11 @@ for(ii = 1:length(a))
             % power spectral density
             [psd,f_psd] = periodogram(Y,rectwin(N),NFFT,Fs, 'psd');
             
-            % calculate energy
-            E = sum(psd*Fs*N)/NFFT;
-
             % calculate power
-            P = E / N;         
+            P = sum(psd)*Fs/NFFT;
+
+            % calculate energy
+            E = P*N;        
             
             % plot            
             subplot(length(a)*length(f)*length(d)/2,2,cnt)
