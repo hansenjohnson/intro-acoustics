@@ -15,6 +15,12 @@ cd ~/Projects/intro_acoustics/docs/
 jupyter notebook
 ```
 
+Here is a [nice overview](https://nbsphinx.readthedocs.io/en/0.2.7/index.html) of various tools that can be used within Jupyter notebooks.
+
+Happy coding!
+
+***
+
 ## Setting up Jupyter notebooks for MATLAB
 
 I followed along with the tutorial [here](https://am111.readthedocs.io/en/latest/jmatlab_install.html)
