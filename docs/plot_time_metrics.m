@@ -1,5 +1,4 @@
 function plot_time_metrics(signal_type,a,f,d,Fs,D)
-%% plot_time_metrics(signal_type,a,f,d,Fs,D)
 
 dt = 1/Fs;      % sampling interval
 N = Fs*D;       % length of total (samples)
@@ -53,17 +52,17 @@ for(ii = 1:length(a))
                     y(1:length(pls)) = pls;
 
                 case 'chirp'
-                    y = chirp(t,0,d_i,f_i,'linear', -90);
+                    y = chirp(t,f/2,d_i,f_i,'linear', -90);
             end
 
             % pad signal
             Y = [pad y pad];
 
             % calculate energy
-            E = sum(Y.^2)*dt;
+            E = sum(abs(Y).^2);
 
             % calculate power
-            P = E / n*dt;
+            P = E / N;
 
             % calculate RMS
             RMS = sqrt(P);
@@ -77,17 +76,15 @@ for(ii = 1:length(a))
             % plot
             subplot(length(a)*length(f)*length(d)/2,2,cnt)
             plot(T, Y)
-            ylim([-max(a) max(a)]*2)
+            ylim([-max(a_i) max(a_i)]*2)
             title({sprintf('Amplitude: %1d  Duration: %1d  Frequency: %1d', a_i, d_i, f_i),...
-                sprintf('Energy: %2f  Power: %2f', E, P),...
-                sprintf('RMS: %2f, P0: %2f, PP: %2f', RMS, P0, PP)})
+                sprintf('Energy: %.0f  Power: %.02f', E, P),...
+                sprintf('RMS: %.02f, P0: %.02f, PP: %.02f', RMS, P0, PP)})   
 
             % update counter
             cnt=cnt+1;
         end
     end
 end
-
 set(gcf, 'PaperPosition', [0 0 20 24]); % increase figure size
-
 return
