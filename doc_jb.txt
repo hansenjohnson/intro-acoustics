@@ -4,4 +4,8 @@ hansen is cool
 
 Gaetan test
 
+<<<<<<< HEAD
 test same time as Youenn
+=======
+They are days wheen I don't want to work. And they are days everyday
+>>>>>>> 4e8526e356ab8338237d6f383291e6a5490b580f
