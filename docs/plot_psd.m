@@ -68,7 +68,10 @@ for(ii = 1:length(a))
             P = sum(psd)*Fs/NFFT;
 
             % calculate energy
-            E = P*N;        
+            E = P*D;        
+            
+            % calculate RMS
+            RMS = sqrt(P);
             
             % plot            
             subplot(length(a)*length(f)*length(d)/2,2,cnt)
@@ -77,9 +80,8 @@ for(ii = 1:length(a))
             xlim([0 2*max(f)])
             ylabel('Power/frequency [dB/Hz]')
             xlabel('Normalized frequency [Hz]')
-            title({'Power spectral density',...
-                sprintf('Amplitude: %1d  Duration: %1d  Frequency: %1d', a_i, d_i, f_i),...
-                sprintf('Energy: %.0f   Power: %.02f', E, P)})
+            title({sprintf('Amplitude: %1d   Duration: %1d   Frequency: %1d', a_i, d_i, f_i),...
+                    sprintf('Energy: %.02f   Power: %.02f   RMS: %.02f ', E, P, RMS)}) 
             
             % update counter
             cnt=cnt+1;
