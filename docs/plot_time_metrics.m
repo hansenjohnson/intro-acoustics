@@ -52,17 +52,17 @@ for(ii = 1:length(a))
                     y(1:length(pls)) = pls;
 
                 case 'chirp'
-                    y = chirp(t,f/2,d_i,f_i,'linear', -90);
+                    y = chirp(t,0,d_i,f_i,'linear', -90);
             end
 
             % pad signal
             Y = [pad y pad];
 
             % calculate energy
-            E = sum(abs(Y).^2);
+            E = sum(abs(Y).^2)*dt;
 
             % calculate power
-            P = E / N;
+            P = E / D;
 
             % calculate RMS
             RMS = sqrt(P);
@@ -77,9 +77,9 @@ for(ii = 1:length(a))
             subplot(length(a)*length(f)*length(d)/2,2,cnt)
             plot(T, Y)
             ylim([-max(a_i) max(a_i)]*2)
-            title({sprintf('Amplitude: %1d  Duration: %1d  Frequency: %1d', a_i, d_i, f_i),...
-                sprintf('Energy: %.0f  Power: %.02f', E, P),...
-                sprintf('RMS: %.02f, P0: %.02f, PP: %.02f', RMS, P0, PP)})   
+            title({sprintf('Amplitude: %1d   Duration: %1d   Frequency: %1d', a_i, d_i, f_i),...
+                    sprintf('Energy: %.02f   Power: %.02f   RMS: %.02f ', E, P, RMS),...
+                    sprintf('P0: %.02f  PP: %.02f', P0, PP)})   
 
             % update counter
             cnt=cnt+1;
