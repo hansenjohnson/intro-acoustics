@@ -16,3 +16,4 @@ Overview of essential tools and concepts for bioacoustics research
    signals.ipynb
    time_domain_metrics.ipynb
    freq_domain_metrics.ipynb
+   Propagation.ipynb
